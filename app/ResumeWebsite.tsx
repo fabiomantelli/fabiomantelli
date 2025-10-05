@@ -1,12 +1,12 @@
 "use client";
 
 import React, { useState, useEffect } from 'react';
-import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Zap, Settings, Monitor, Cpu, Database, Shield, Award, Calendar, ArrowRight, Download, User, Briefcase, GraduationCap, Star } from 'lucide-react';
+import Image from 'next/image';
+import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Zap, Monitor, Cpu, Database, Shield, Award, Calendar, ArrowRight, Download, User, Briefcase, GraduationCap, Star } from 'lucide-react';
 
 const ResumeWebsite = () => {
   const [activeSection, setActiveSection] = useState('hero');
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isClient, setIsClient] = useState(false);
   
   // Estados do formulário de contato
   const [formData, setFormData] = useState({
@@ -18,8 +18,6 @@ const ResumeWebsite = () => {
   const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   useEffect(() => {
-    setIsClient(true);
-    
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
       
@@ -233,9 +231,11 @@ const ResumeWebsite = () => {
         <div className="text-center z-10 max-w-4xl mx-auto px-6">
           <div className="mb-8 relative">
             <div className="w-32 h-32 mx-auto rounded-full overflow-hidden shadow-2xl ring-4 ring-white">
-              <img 
+              <Image 
                 src="/fabio.jpeg" 
                 alt="Fabio Mantelli" 
+                width={128}
+                height={128}
                 className="w-full h-full object-cover"
               />
             </div>
@@ -313,7 +313,7 @@ const ResumeWebsite = () => {
                   <h3 className="text-2xl font-bold text-gray-900 font-serif">Innovation Focus</h3>
                 </div>
                 <p className="text-gray-600 leading-relaxed">
-                  I'm passionate about smart grid technologies, synchrophasor systems, and sustainable energy solutions. 
+                  I&apos;m passionate about smart grid technologies, synchrophasor systems, and sustainable energy solutions. 
                   My goal is to contribute to a more connected and efficient world through intelligent electrical systems and advanced monitoring capabilities.
                 </p>
               </div>
@@ -483,9 +483,11 @@ const ResumeWebsite = () => {
             {projects.map((project, index) => (
               <div key={index} className="group bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl transition-all duration-300 hover:-translate-y-2">
                 <div className="relative overflow-hidden">
-                  <img 
+                  <Image 
                     src={project.image} 
                     alt={project.title}
+                    width={400}
+                    height={192}
                     className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent"></div>
@@ -533,7 +535,7 @@ const ResumeWebsite = () => {
         <div className="max-w-4xl mx-auto px-6">
           <div className="text-center mb-16">
             <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4 font-serif">
-              Let's Connect
+              Let&apos;s Connect
             </h2>
             <div className="w-24 h-1 bg-blue-600 mx-auto rounded-full"></div>
           </div>
@@ -543,7 +545,7 @@ const ResumeWebsite = () => {
               <div className="bg-gray-50 rounded-2xl p-8 border border-gray-100">
                 <h3 className="text-2xl font-bold text-gray-900 mb-6 font-serif">Get In Touch</h3>
                 <p className="text-gray-600 mb-8 leading-relaxed">
-                  I'm always interested in discussing new opportunities, innovative projects, 
+                  I&apos;m always interested in discussing new opportunities, innovative projects, 
                   or collaborations in electrical engineering and technology.
                 </p>
                 
@@ -605,7 +607,7 @@ const ResumeWebsite = () => {
               
               {submitStatus === 'success' && (
                 <div className="mb-6 p-4 bg-green-100 border border-green-200 rounded-xl">
-                  <p className="text-green-800 font-medium">✅ Message sent successfully! I'll get back to you soon.</p>
+                  <p className="text-green-800 font-medium">✅ Message sent successfully! I&apos;ll get back to you soon.</p>
                 </div>
               )}
               

@@ -25,7 +25,7 @@ export async function POST(request: NextRequest) {
     }
 
     // Enviar email usando Resend
-    const data = await resend.emails.send({
+    await resend.emails.send({
       from: 'Portfolio Contact <onboarding@resend.dev>', // Email padrão do Resend
       to: ['fmmantelli@gmail.com'], // Seu email
       subject: `New Contact Form Message from ${name}`,
@@ -56,7 +56,7 @@ export async function POST(request: NextRequest) {
     });
 
     return NextResponse.json(
-      { message: 'Email sent successfully', id: data.id },
+      { message: 'Email sent successfully' },
       { status: 200 }
     );
 
