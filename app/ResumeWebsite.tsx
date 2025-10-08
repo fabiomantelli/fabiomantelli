@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ChevronDown, Mail, Phone, MapPin, Github, Linkedin, ExternalLink, Code, Zap, Monitor, Cpu, Database, Shield, Award, Calendar, ArrowRight, Download, User, Briefcase, GraduationCap, Star } from 'lucide-react';
+import { ChevronDown, Mail, MapPin, Github, Linkedin, ExternalLink, Code, Zap, Monitor, Cpu, Database, Shield, Award, Calendar, ArrowRight, Download, User, Briefcase, GraduationCap, Star } from 'lucide-react';
 
 const ResumeWebsite = () => {
   const [activeSection, setActiveSection] = useState('hero');
