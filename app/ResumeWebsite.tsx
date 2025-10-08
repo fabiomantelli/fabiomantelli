@@ -561,13 +561,13 @@ const ResumeWebsite = () => {
                   </div>
                   
                   <div className="flex items-center gap-4">
-                    <div className="p-3 bg-green-100 rounded-xl">
+                    {/* <div className="p-3 bg-green-100 rounded-xl">
                       <Phone className="w-6 h-6 text-green-600" />
                     </div>
                     <div>
                       <span className="text-gray-500 text-sm">Phone</span>
                       <p className="text-gray-900 font-semibold">+1 (407) 247-1860</p>
-                    </div>
+                    </div> */}
                   </div>
                   
                   <div className="flex items-center gap-4">
